@@ -12,6 +12,6 @@ public class Effect : ScriptableObject
     public void Play(Vector3 position, Vector3 normal) => Play(position, normal.ToQuaternion());
     public void Play(Vector3 position, Quaternion rotation) 
     {
-        effect.Instantiate().transform.SetTransform(position, rotation).gameObject.SetActive(false,lifeTime);
+        effect.InstantiatePool().transform.SetTransform(position, rotation).gameObject.SetActive(false,lifeTime);
     } 
 }
